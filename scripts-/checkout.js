@@ -2,7 +2,7 @@ import {products} from '../data/products.js'
 import {cart, removeFromCart} from '../data/cart.js';
 import {formatCurrency} from './utils/money.js';
 
-let cartSummaryHTML;
+let cartSummaryHTML = '';
 cart.forEach((cartItem) => {
   const productId = cartItem.productId;
 
