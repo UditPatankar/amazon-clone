@@ -1,5 +1,5 @@
 import {products} from '../data/products.js'
-import {cart, removeFromCart} from '../data/cart.js';
+import {cart, removeFromCart,calculateCartQuantity} from '../data/cart.js';
 import {formatCurrency} from './utils/money.js';
 
 let cartSummaryHTML = '';
@@ -102,5 +102,14 @@ document.querySelectorAll('.js-delete-quantity-link').forEach((deleteLink) => {
     
     const container = document.querySelector(`.js-cart-item-container-${productId}`);
     container.remove();
+
+    updateCartQuantity();
   });
 });
+
+function updateCartQuantity() {
+  const cartQuantity = calculateCartQuantity();
+  document.querySelector('.js-checkout-header-middle-section').innerText = `${cartQuantity} items`;
+}
+
+updateCartQuantity();
