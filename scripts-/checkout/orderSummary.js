@@ -140,10 +140,9 @@ export function renderOrderSummary() {
 
       updateQuantity(productId, newQuantity); 
       
-      const quantityLabel = document.querySelector(`.js-quantity-label-${productId}`);
-      quantityLabel.innerHTML = newQuantity;
-
-      renderCheckoutHeader()
+      renderOrderSummary();
+      renderCheckoutHeader();
+      renderPaymentSummary();
     });
   });
 
