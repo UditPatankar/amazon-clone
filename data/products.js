@@ -59,6 +59,53 @@ class Clothing extends Product {
   }
 }
 
+/* const date = new Date();
+console.log(date);
+console.log(date.toLocaleTimeString()); */
+
+/* console.log(this);
+
+const object2 = {
+  a: 2,
+  b: this.a
+} */
+
+/* function logThis(p1, p2) {
+  console.log(this); // inside regular function this is undefined
+}
+logThis();
+logThis.call('value of this', 1, 2); */
+
+/* const object3 = {
+  method() {
+    console.log(this); // inside noraml methods this points to outer object 
+  }
+};
+object3.method(); */
+
+/* const object4 = {
+  arrowMethod: () => {
+    console.log(this); 
+    // Arrow functions do not create their own this.
+    // They take this from where they are created 
+    // the file/module/global scope
+  }
+};
+object4.arrowMethod();
+ */
+
+/* const object5 = {
+  method() {
+    const arrowMethod = () => {
+      console.group(this);
+    }
+
+    arrowMethod();
+  }
+};
+object5.method(); // here method is called with object5 as "this" and arrowMethod inherits it.
+ */
+
 export const products = [
   {
     id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
