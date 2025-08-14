@@ -139,7 +139,7 @@ export function renderOrderSummary() {
         newQuantity = +quantityInput.value;
       }
 
-      updateQuantity(productId, newQuantity); 
+      cart.updateQuantity(productId, newQuantity); 
       
       renderOrderSummary();
       renderCheckoutHeader();
