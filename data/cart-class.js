@@ -27,7 +27,7 @@ class Cart {
       localStorage.setItem(this.#localStorageKey, JSON.stringify(this.cartItems));
   }
 
-  addToCart(productId) {
+  addToCart(productId,selectedQuantity) {
   
     // check if the product is already available in the cart
     let matchingItem;
@@ -36,9 +36,6 @@ class Cart {
         matchingItem = cartItem;
       }
     });
-
-    // get the selected quantity
-    const selectedQuantity = +document.querySelector(`.js-quantity-selector-${productId}`).value;
 
     if(matchingItem) {
       matchingItem.quantity += selectedQuantity;
